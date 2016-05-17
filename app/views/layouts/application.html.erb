@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfolio</title>
+  <title>Mohit Chandana - Ruby on Rails Developer</title>
+  <script src="https://use.fontawesome.com/7804028f12.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <header id="main_navigation" class="clearfix">
+  <a href="#" class="name">Mohit Chandana</a>
+  <nav>
+    <%= link_to "Articles", posts_path %>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
 <%= yield %>
 
