@@ -12,7 +12,7 @@
 <body>
 
   <header id="main_navigation" class="clearfix">
-  <a href="#" class="name">Mohit Chandana</a>
+    <%= link_to "Mohit Chandana", root_path, class: "name" %>
   <nav>
     <%= link_to "Articles", posts_path %>
     <a href="#">Projects</a>
@@ -21,6 +21,17 @@
 </header>
 
 <%= yield %>
+
+  <footer id="main_footer">
+    <p class="copyright">&copy;2016 Mohit Chandana</p>
+    <nav>
+      <a href="https://twitter.com/chandanamohit"target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/chmohit4"target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+      <a href="https://github.com/git4ruby"target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+    </nav>
+  </footer>
+
 
 </body>
 </html>
