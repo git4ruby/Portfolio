@@ -2,7 +2,7 @@
     <% if @post.errors.any? %>
     <h2><%= pluraize(@post.errors.count, "error") %> prevented this post from saving:</h2>
     <ul>
-      <% @posts.errors.full_messages.each do |msg| %>
+      <% @post.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
       <% end %>
     </ul>

@@ -19,12 +19,9 @@
 
     <h2>Stuff I've built</h2>
     <hr>
-    <h3><a href="#">Begginers Code</a></h3>
-    <p class="date">Friday May 13th</p>
-    <h3><a href="#">Movie Reviews</a></h3>
-    <p class="date">Friday May 13th</p>
-    <h3><a href="#">ToDo Lists</a></h3>
-    <p class="date">Friday May 13th</p>
-
+    <% @projects.each do |project| %>
+        <h3><a href="#"><%= link_to project.title, project %></a></h3>
+        <p class="date"><%= project.created_at.strftime("%A, %b %d")%></p>
+    <% end %>
   </div>
 </div>
