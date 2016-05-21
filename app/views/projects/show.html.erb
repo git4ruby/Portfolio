@@ -14,10 +14,16 @@
     </div>
 
 
-<%= link_to "Back", root_path %>
-<%= link_to "Edit", edit_project_path(@project) %>
-<%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure you want to delete this post?"} %>
 
+  <% if user_signed_in? %>
+      <div id="admin_links">
+        <%= link_to "Back", projects_path %>
+        <%= link_to "Edit Article", edit_project_path(@project) %>
+        <%= link_to "Delete Article", project_path(@project), method: :delete, data: { confirm: "Are you sure you want to delete this post?"} %>
+
+      </div>
+
+  <% end %>
 
   <hr>
 </div>
